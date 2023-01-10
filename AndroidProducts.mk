@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/xdroid_ginkgo.mk
+    $(LOCAL_DIR)/cherish_ginkgo.mk
 
 COMMON_LUNCH_CHOICES := \
-    xdroid_ginkgo-user \
-    xdroid_ginkgo-userdebug \
-    xdroid_ginkgo-eng
+    cherish_ginkgo-user \
+    cherish_ginkgo-userdebug \
+    cherish_ginkgo-eng
