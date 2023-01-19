@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cherish_ginkgo.mk
+    $(LOCAL_DIR)/ginkgo.mk
 
 COMMON_LUNCH_CHOICES := \
-    cherish_ginkgo-user \
-    cherish_ginkgo-userdebug \
-    cherish_ginkgo-eng
+    ginkgo-user \
+    ginkgo-userdebug \
+    ginkgo-eng
