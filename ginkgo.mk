@@ -1,7 +1,5 @@
 #
 # Copyright (C) 2020 ArrowOS
-# Copyright (C) 2020 AncientRoms
-# Copyright (C) 2022 Xdroid mnmlist
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,8 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from ginkgo device
 $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 
-# Inherit some common Cherish stuff
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+# Inherit some common Proton+ stuff.
+$(call inherit-product, vendor/proton/config/common.mk)
+PROTON_BUILD_VARIANT := UNOFFICIAL
 
 #Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
@@ -36,32 +35,15 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_BOOT_ANIMATION_RES := 720
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_GAPPS_ARCH := arm64
-
-# Status
-CHERISH_BUILD_TYPE := OFFICIAL
-
-# Maintainer
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cherish.maintainer=Agatha
-
-# Build Flags
-WITH_GMS := true
-
-# Blur
-ro.surface_flinger.supports_background_blur=1
-ro.sf.blurs_are_expensive=1
 
 # AudioFx
 TARGET_EXCLUDES_AUDIOFX := true
 
-# Spoof build description/fingerprint as pixel device
-TARGET_USE_PIXEL_FINGERPRINT := true
-
 # Device identifier
-PRODUCT_NAME := cherish_ginkgo
+PRODUCT_NAME := ginkgo
 PRODUCT_DEVICE := ginkgo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 8
